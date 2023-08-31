@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+/* 초기화 */
+*{
+    margin: 0px auto;
+    padding: 0px;
+    list-style: none;
+    font-family: "맑은 고딕";
+    color: #333333;
+    box-sizing: border-box;
+}
+body{
+    min-width: 1200px;
+    background-color: #ffffff;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+/* header */
+header{
+    width: 100%;
+    height: 100px;
+    background: #ddd;
+}
+.top{
+    width: 1200px;
+}
+.logo{
+    float: left;
+    width: 250px;
+    height: 100px;
+    background-color: pink;
+}
+.menu{
+    float: right;
+    width: 800px; /* ?? */
+    height: 100px;
+    background-color: yellow;
+}
+.navi{
+    float: right;
+    margin-top: 60px;
+}
+.navi > li{
+    float: left;
+}
+.navi > li >a{
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+}
+.navi > li > a:hover{
+    background-color: #30a3f3;
+}
+.submenu{
+    position: relative;
+    width: 180px;
+    height: 160px;
+    background-color: pink;
+    z-index: 3;
+    display: none;
+}
+.submenu > li > a{
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+.submenu > li > a:hover{
+    background-color: #30a3f3;
+}
+
+/* imgae */
+.imgslide{
+    width: 1200px;
+    height: 300px;
+    /* background-color: aqua; */
+
+    position: relative;
+    overflow: hidden;
+}
+.imgslide > a{
+    display: block;
+    position: absolute;
+    top: 0px; /* ?? */
+    left: 0px;
+
+    transition: all 3s;
+}
+.imgtext{
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+
+    position: absolute;
+    left: 600px;
+    top: 150px;
+    margin-left: -250px;
+    margin-top: -25px;
+}
+
+/* contents */
+.contents{
+    width: 1200px;
+    height: 200px;
+
+    position: relative;
+}
+.tabmenu{
+    float: left;
+    width: 400px;
+    height: 180px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* background-color: green; */
+
+    position: relative;
+}
+
+.tabmenu > li{
+    float: left;
+    width: 100px;
+    line-height: 30px;
+}
+.tabmenu > li > a{
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ccc;
+    border: 1px solid #ddd;
+}
+.tabmenu > li > a:hover{
+    background-color: #eee;
+}
+
+.tabmenu > li.active > a{
+    background-color: #fff;
+}
+
+.tabmenu > li div{
+    position: absolute;
+    left: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+.tabmenu > li.active div{
+    width: 393px;
+    height: 148px;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+.notice ul{
+    float: left;
+    width: 393px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.notice li{
+    height: 32px;
+    line-height: 32px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.notice li:nth-of-type(2n){
+    background-color: #ccc;
+}
+.notice li span{
+    float: right;
+}
+.notice li:hover{
+    font-weight: bold;
+}
+
+.gallery li{
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.gallery img{
+    width: 110px;
+    height: 110px;
+    padding: 5px;
+}
+.gallery li:hover{
+    opacity: 0.5;
+}
+
+/* 배너자리 */
+.banner{
+    float: left;
+    width: 400px;
+    height: 180px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* background-color: red; */
+}
+.banner img{
+    float: left;
+    width: 395px;
+    height: 180px;
+}
+.bntext{
+    float: left;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 40px;
+    background-color: rgba(40,40,40,0.5);
+
+    position: absolute;
+    left: 450px;
+    top: 80px;
+}
+.banner img:hover{
+    opacity: 0.5;
+}
+
+/* 바로가기 자리 */
+.shortcut{
+    float: right;
+    width: 400px;
+    height: 180px;
+    /* background-color: blue; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.shortcut img{
+    float: right;
+    width: 400px;
+    height: 180px;
+}
+.sctext{
+    float: right;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 40px;
+    background-color: rgba(40,40,40,0.5);
+
+    position: absolute;
+    left: 850px;
+    top: 80px;
+}
+.shortcut img:hover{
+    opacity: 0.5;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #30a3f3;
+}
+
+.wrap{
+    width: 1200px;
+}
+
+.btlogo{
+    float: left;
+    width: 250px;
+    height: 100px;
+    /* background-color: yellow; */
+}
+
+.site{
+    float: right;
+    width: 600px;
+    height: 100px;
+    /* background-color: beige; */
+}
+.btmenu{
+    width: 600px;
+    height: 50px;
+    /* background-color: yellowgreen; */
+
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+}
+.btmenu li{
+    margin-top: 10px;
+    display: inline-block;
+    width: 100px;
+}
+.btmenu li:hover{
+    font-weight: bold;
+}
+.copy{
+    width: 600px;
+    height: 50px;
+
+    /* background-color: gold; */
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+}
